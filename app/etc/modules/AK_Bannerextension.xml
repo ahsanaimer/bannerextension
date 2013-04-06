@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<AK_Bannerextension>
+			<active>true</active>
+			<codePool>community</codePool>			
+		</AK_Bannerextension>
+	</modules>
+</config>

@@ -1,0 +1,10 @@
+.banner_extension{ margin:0px auto 10px; padding:0px; position:relative; clear:both; }
+.banner_extension .next_slide , .banner_extension .prev_slide{ position:absolute; top:50px; cursor:pointer; background:#000; color:#fff; padding:2px 10px; }
+.banner_extension .next_slide{ right:0px; }
+.banner_extension .prev_slide{ left:0px; }
+.banner_extension ul{ list-style:none; margin:0px; padding:0px; text-align:right; }
+.banner_extension .banner_wrapper{ margin:0px auto; }
+.banner_extension .banner_pagination{ clear:both; margin:2px 0; overflow:hidden; padding:0px;}
+.banner_extension .banner_pagination ul{ list-style:none; }
+.banner_extension .banner_pagination li{ font-size:0px; cursor:pointer; background:#000; color:#fff; display:inline-block; margin:0 3px; padding:8px; }
+.banner_extension .banner_pagination li.active{ background:#aaa; }

@@ -1,0 +1,84 @@
+<?php
+/*
+*Banner form.phtml file
+*Using this templlate file to add/edit the banner
+*/
+?>
+
+
+<div class="form_wrapper">
+
+<div class="content-header">
+<h3 class="icon-head head-adminhtml-bannerslider"><?php echo Mage::helper('bannerextension')->__('Add New Banner') ?></h3>
+<p class="form-buttons">
+<button style="" onclick="setLocation('<?php echo Mage::helper("adminhtml")->getUrl("bannerextension/adminhtml_bannerextension/"); ?>')" class="scalable back" type="button" title="<?php echo Mage::helper('bannerextension')->__('Back') ?>"  id="back_btn"><span><span><span><?php echo Mage::helper('bannerextension')->__('Back') ?></span></span></span></button>
+</p>
+</div>
+
+<form id="banner_form" name="banner_form" method="post" enctype="multipart/form-data" action="<?php echo $this->getUrl('*/*/save', array('id' => $this->getRequest()->getParam('id'))) ?>">
+
+<input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+<div class="entry-edit">
+    <div class="entry-edit-head">
+    <h4 class="icon-head head-edit-form fieldset-legend">General information</h4>
+	</div>
+	
+    <div id="settings" class="fieldset ">
+	<div class="hor-scroll">
+      <table cellspacing="0" class="form-list">
+		  <tbody>
+			  <tr>
+				  <td class="label"><label>Banner File</label></td>
+				  <td class="value">
+					  <input type="file" class="input-file validation-passed" value="" name="filepath" id="filepath">	 
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td class="label"><label>Banner Url</label></td>
+				  <td class="value">
+					  <input type="text" name="url" id="url" value="<?php echo $this->getBannerUrl() ?>" class="input-text required-entry" />	 
+				  </td>
+			  </tr>
+			  
+			  <tr>
+				  <td class="label"><label>Banner Title</label></td>
+				  <td class="value">
+					  <input type="text" name="title" id="title" value="<?php echo $this->getBannerTitle() ?>" class="input-text" />	 
+				  </td>
+			  </tr>
+			  		
+			  <tr>
+				  <td class="label"><label>Banner Status</label></td>
+				  <td class="value">
+				  	  <select name="status" id="status">	
+				  	  <?php $_statusFields=Mage::helper('bannerextension')->getStatusFields(); ?>	
+					  <?php foreach($_statusFields as $_key=>$_sf): ?>
+					  	  <option <?php if($this->getBannerStatus()==$_key): ?>selected="selected" <?php endif; ?> value="<?php echo $_key ?>"><?php echo $_sf ?></option>
+					  <?php endforeach; ?> 
+					  </select>
+				  </td>
+			  </tr>
+			  
+			 <tr>
+			 	  <td class="label"><label></label></td> 	
+				  <td class="value">
+					  <button class="save" type="submit" title="<?php echo Mage::helper('bannerextension')->__('Save') ?>" id="save_btn"><span><span><span><?php echo Mage::helper('bannerextension')->__('Save') ?></span></span></span></button>			  
+				  </td>
+			  </tr>
+			  
+			  						  			  
+        </tbody>
+     </table>
+    </div>			
+	</div>
+		
+</form>
+
+    <script type="text/javascript">
+    //<![CDATA[
+        var banner_form = new varienForm('banner_form');
+    //]]>
+    </script>
+	
+</div><!-- end form_wrapper -->

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+<!--        <reference name="head">
+            <action method="addItem" ifconfig="ak_bannerextension/general/enabled"><type>skin_css</type><name>bannerextension/css/bannerextension.css</name></action>
+			<action method="addItem" ifconfig="ak_bannerextension/general/enabled"><type>skin_js</type><name>bannerextension/js/jquery.js</name></action>
+			<action method="addItem" ifconfig="ak_bannerextension/general/enabled"><type>skin_js</type><name>bannerextension/js/bannerextension.js</name></action>
+			
+        </reference>-->
+    </default>			
+</layout>

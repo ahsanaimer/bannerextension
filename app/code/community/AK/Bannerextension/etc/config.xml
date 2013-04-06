@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<AK_Bannerextension>
+			<version>1.0.0</version>
+		</AK_Bannerextension>
+	</modules>
+
+	<admin>
+		<routers> <!-- the <bannerextension> tagname appears to be arbitrary, but by convention is should match the frontName tag below -->
+
+			<bannerextension>
+				<use>admin</use>
+				<args>
+					<module>AK_Bannerextension</module>
+					<frontName>bannerextension</frontName>
+				</args>
+			</bannerextension>
+		</routers>
+	</admin>
+
+		
+	<adminhtml>	
+		<layout>
+			<updates>
+				<bannerextension>
+					<file>bannerextension.xml</file>
+				</bannerextension>
+			</updates>	
+		</layout>
+	</adminhtml>
+
+
+	<frontend>	
+		<layout>
+			<updates>
+				<bannerextension>
+					<file>bannerextension.xml</file>
+				</bannerextension>
+			</updates>	
+		</layout>
+	</frontend>
+		
+	<global>	
+		<blocks>
+		   <bannerextension>	
+			<class>AK_Bannerextension_Block</class>
+		   </bannerextension>	
+		</blocks>	
+						
+		<models>		
+            <bannerextension>
+                <class>AK_Bannerextension_Model</class>
+                <resourceModel>bannerextension_mysql4</resourceModel><!-- tell Magento where to look for your resource class -->
+            </bannerextension>
+            <bannerextension_mysql4>
+                <class>AK_Bannerextension_Model_Mysql4</class>
+                <entities>
+                    <bannerextension>
+                        <table>bannerextension</table> <!-- tell magento which table to target -->
+                    </bannerextension>
+                </entities>
+            </bannerextension_mysql4>		
+		</models>
+				
+        <resources>
+            <bannerextension_setup>
+                <setup>
+                    <module>AK_Bannerextension</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bannerextension_setup>
+            <bannerextension_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bannerextension_write>
+            <bannerextension_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bannerextension_read>
+        </resources>
+						
+		<helpers>
+		   <bannerextension>
+				<class>AK_Bannerextension_Helper</class>
+		   </bannerextension>		
+		</helpers>
+						
+	</global>
+
+	
+</config>

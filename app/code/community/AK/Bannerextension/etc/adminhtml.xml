@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<menu>
+		<bannerextension module="bannerextension">
+			<title>Banner Extension</title>
+			<sort_order>85</sort_order>               
+			<children>
+			
+				<managebanners module="bannerextension">
+					<title>Manage Banners</title>
+					<sort_order>10</sort_order>
+					<action>bannerextension/adminhtml_bannerextension</action>
+				</managebanners>
+				
+				<addbanner module="bannerextension">
+					<title>Add New Banner</title>
+					<sort_order>0</sort_order>
+					<action>bannerextension/adminhtml_bannerextension/new</action>
+				</addbanner>			
+								
+			</children>
+		</bannerextension>
+	</menu>
+		
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<ak_bannerextension translate="title" module="bannerextension">
+										<title>Banner Extension</title>
+										<sort_order>100</sort_order>
+									</ak_bannerextension>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

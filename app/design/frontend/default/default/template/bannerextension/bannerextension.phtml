@@ -1,0 +1,56 @@
+<?php 
+$_bannerCollection = $this->getBannerCollection();
+$_isEnabled=$this->getIsEnabled();
+$_bannerSize=$this->getBannerSize();
+$_showAuto=$this->showAuto();
+$_slideSpeed=$this->getSlideSpeed();
+$_showPagination=$this->showPagination();
+$_showNavigation=$this->showNavigation();
+$_showVisible=$this->showVisible();
+$_bannerEffects=$this->getBannerEffects();
+?>
+
+<?php if(!empty($_bannerCollection) && $_isEnabled): ?>
+<div style="width:<?php echo $_bannerSize[0]; ?>px" class="banner_extension" id="banner_extension">
+<ul id="banner_ul">
+<?php foreach($_bannerCollection as $_banner): ?>
+	<li>
+		<a href="<?php echo $_banner->getUrl() ?>">
+			<img width="<?php echo $_bannerSize[0]; ?>" src="<?php echo $this->getImagePath($_banner->getFilepath()) ?>" alt="<?php echo $_banner->getTitle() ?>" title="<?php echo $_banner->getTitle() ?>" />
+		</a>
+	</li>
+<?php endforeach; ?>
+</ul>
+
+<?php if(!empty($_showPagination)): ?>
+<ul class="banner_pagination">
+<?php $_i=1; foreach($_bannerCollection as $_banner): ?>
+<li class="<?php if($_i==1) echo 'active' ?>"><?php echo $_i++; ?></li>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
+
+<?php if(!empty($_showNavigation)): ?>
+<span style="top:<?php echo $_bannerSize[1]/2; ?>px" class="prev_slide"><?php echo Mage::helper('bannerextension')->__('Prev') ?></span>
+<span style="top:<?php echo $_bannerSize[1]/2; ?>px" class="next_slide"><?php echo Mage::helper('bannerextension')->__('Next') ?></span>
+<?php endif; ?>
+
+</div>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("#banner_ul").bannerextension({
+                width:<?php echo $_bannerSize[0] ?>,
+                height:<?php echo $_bannerSize[1] ?>,
+                visible:<?php echo $_showVisible ?>,
+                auto: <?php echo $_showAuto ?>,
+				slidespeed: <?php echo $_slideSpeed ?>,
+                next: jQuery('.next_slide'),
+                prev: jQuery('.prev_slide'),
+				pagination: <?php echo $_showPagination ?>,
+				effect:"<?php echo $_bannerEffects ?>"
+            });
+		});        
+    </script>
+
+<?php endif; ?>

@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <bannerextension translate="label" module="bannerextension">
+            <label>AK Extensions</label>
+            <sort_order>196</sort_order>
+        </bannerextension>
+    </tabs>
+    <sections>
+        <ak_bannerextension translate="label" module="bannerextension">
+            <label>Banner Extension</label>
+            <tab>bannerextension</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>53</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable Banner extension</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <bannerSize translate="label comment">
+                            <label>Banner resolution</label>
+                            <comment>Size in pixels width_height.(Default 500_500). </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bannerSize>
+
+						<bannerAuto translate="label, comment">
+							<label>Start banner automatically</label>
+							<comment>Start banner after specific milisecond. e.g 3000</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerAuto>
+											
+                        <bannerSpeed translate="label comment">
+                            <label>Banner sliding Speed</label>
+                            <comment>Default value is 1000. </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bannerSpeed>
+												
+                        <bannerVisible translate="label comment">
+                            <label>Banner per slide</label>
+                            <comment>By default 1 banner per slide. </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bannerVisible>
+												
+						<bannerNavigation translate="label, comment">
+							<label>Show next/prev link</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerNavigation>
+						
+						<bannerPagination translate="label, comment">
+							<label>Show Banner Pagination</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerPagination>
+												
+						<!--<bannerVertically translate="label, comment">
+							<label>Show slide vertically</label>
+							<comment>By default banner slide horizontally.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerVertically>-->
+						
+						<!--<bannerFadeEffect translate="label, comment">
+							<label>Show Fade Effect</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerFadeEffect>	-->
+											
+						<bannerSlideEffect translate="label, comment">
+							<label>Sliding effect</label>
+							<comment>By default banner slide horizontally.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>bannerextension/system_config_source_effects</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerSlideEffect>
+						
+						<bannerPagination translate="label, comment">
+							<label>Hide Banner Pagination</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</bannerPagination>						
+																		
+                    </fields>
+                </general>
+            </groups>
+        </ak_bannerextension>
+    </sections>
+</config>

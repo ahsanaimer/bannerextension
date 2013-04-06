@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <bannerextension_adminhtml_bannerextension_index>
+        <reference name="content">
+            <block type="bannerextension/adminhtml_bannerextension" name="bannerextension" />
+        </reference>
+    </bannerextension_adminhtml_bannerextension_index>
+	
+	
+    <bannerextension_adminhtml_bannerextension_new>
+        <reference name="content">
+            <block type="bannerextension/adminhtml_form" name="bannerextension_from" template="bannerextension/form.phtml" />
+        </reference>
+    </bannerextension_adminhtml_bannerextension_new>
+		
+    <bannerextension_adminhtml_bannerextension_edit>
+        <reference name="content">
+            <block type="bannerextension/adminhtml_form" name="bannerextension_from" template="bannerextension/form.phtml" />
+        </reference>
+    </bannerextension_adminhtml_bannerextension_edit>
+			
+</layout>
