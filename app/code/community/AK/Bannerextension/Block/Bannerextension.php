@@ -7,6 +7,7 @@
 class AK_Bannerextension_Block_Bannerextension extends Mage_Core_Block_Template {
 	
 	private $_configData='';
+	protected $test=0;
 	
 	public function _construct(){
 		parent::_construct();
