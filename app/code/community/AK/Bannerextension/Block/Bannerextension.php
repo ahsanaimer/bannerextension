@@ -115,9 +115,12 @@ class AK_Bannerextension_Block_Bannerextension extends Mage_Core_Block_Template 
 		return Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$_filename;
 	}
 		
-	//load all of the enabled items from database table 'bannerextension'.
 	public function testFunction() {
 		return true;
 	}
+	//load all of the enabled items from database table 'bannerextension'.
+	public function brnachFunction() {
+		return 0;
+	}	
 			
 }
